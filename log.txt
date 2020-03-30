@@ -1,0 +1,13 @@
+p2 -> login page
+p3 -> Sign Up Page
+p4 -> Succesfully Account Created
+p5 -> home page
+p6 -> sell page
+p7 -> Books Details Successfuly taken
+p8 -> Buy Page
+p9 -> Check Records
+
+laravel1 -> Database Folder
+
+Username : param
+Password : 123
