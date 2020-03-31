@@ -1,4 +1,4 @@
-p2 -> login page
+p2 -> login page -> first page of application
 p3 -> Sign Up Page
 p4 -> Succesfully Account Created
 p5 -> home page

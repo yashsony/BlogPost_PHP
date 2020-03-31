@@ -100,24 +100,24 @@
 </style>
 
 <?php
-    // session_start();
-    // if(!isset($_SESSION["username"]))
-    // {
-    //     header("Location:p2.php");
-    // }
-    // $conn = mysqli_connect("localhost","root","","laravel1");
+    session_start();
+    if(!isset($_SESSION["username"]))
+    {
+        header("Location:p2.php");
+    }
+    $conn = mysqli_connect("localhost","root","","laravel1");
 
-    // $e=" <h1 style='color:royalblue'> ".$_SESSION["name"]."</h1>";
+    $e=" <h1 style='color:royalblue'> ".$_SESSION["name"]."</h1>";
 
-    // if($_SERVER["REQUEST_METHOD"]=="POST")
-    // {
-    //     $a = $_POST["b1"];
+    if($_SERVER["REQUEST_METHOD"]=="POST")
+    {
+        $a = $_POST["b1"];
         
-    //     if($a == "Log Out")
-    //     {
-    //         session_destroy();
-    //         header("Location:p2.php");
-    //     }
+        if($a == "Log Out")
+        {
+            session_destroy();
+            header("Location:p2.php");
+        }
 
         if($a == "SELL")
         {
@@ -133,7 +133,7 @@
         {
             header("Location:p9.php");
         }
-    
+    }
 
 ?>
 

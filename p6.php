@@ -104,6 +104,90 @@
 
 </style>
 
+<?php
+session_start();
+if(!isset($_SESSION["username"]))
+{
+    header("Location:p2.php");
+}
+$x = "";
+$y = "";
+$z = "";
+$price = "";
+
+    if($_SERVER["REQUEST_METHOD"]=="POST")
+    {
+        $a = $_POST["n1"];
+        $b = $_POST["n2"];
+        $c = $_POST["n3"];
+        $d = $_POST["n4"];
+
+        if(empty($a))
+        {
+            $x = "Required";
+        }
+        else if(!preg_match("/^[A-Za-z0-9 .]{3}[A-Za-z0-9 .]+$/",$a))
+        {
+            $x = "Invalid Book Name";
+        }
+        else
+        {
+            $x = "<font style = 'color:green'>Correct</font>";
+        }
+
+        if(empty($b))
+        {
+            $y = "Required";
+        }
+        else if(!preg_match("/^[A-Za-z0-9 .]{3}[A-Za-z0-9 .]+$/",$b))
+        {
+            $y = "Invalid Publisher Name";
+        }
+        else
+        {
+            $y = "<font style = 'color:green'>Correct</font>";
+        }
+
+        if(empty($c))
+        {
+            $z = "Required";
+        }
+        else if(!preg_match("/^[0-9]{4}+$/",$c))
+        {
+            $z = "Invalid Year";
+        }
+        else
+        {
+            $z = "<font style = 'color:green'>Correct</font>";
+        }
+
+        if(empty($d))
+        {
+            $price = "Required";
+        }
+        else if(!preg_match("/^[0-9]+$/",$d))
+        {
+            $price = "Invalid Price";
+        }
+        else
+        {
+            $price = "<font style = 'color:green'>Correct</font>";
+        }
+
+        if(($x==$y)&&($y==$z)&&($z==$price)&&($price=="<font style = 'color:green'>Correct</font>"))
+        {
+            $conn = mysqli_connect("localhost","root","","laravel1");
+            $k = $_SESSION["username"];
+            $s = "insert into books VALUES('$k','$a','$b','$c','$d','')";
+            $request = mysqli_query($conn,$s);
+            if($request)
+            {
+                header("Location:p7.php");
+            }
+        }
+    }
+
+?>
 
 <body>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>" spellcheck="false" autocomplete="off">
