@@ -119,7 +119,7 @@
 
             <?php
                 $conn = mysqli_connect("localhost","root","","laravel1");
-                $s = "select * from books";
+                $s = "select * from posts";
                 $request = mysqli_query($conn,$s);
                 //$n = mysqli_num_rows($request);       for counting rows
 
@@ -130,7 +130,7 @@
                 {
                     while($row = mysqli_fetch_assoc($request))
                     {
-                        $h1 = $row["Book_Name"];
+                        $h1 = $row["Post_Name"];
                         $h2 = $row["Publisher_Name"];
                         $h3 = $row["Year"];
                         $h4 = $row["Username"];

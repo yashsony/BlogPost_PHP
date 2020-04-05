@@ -63,7 +63,7 @@
 <body>
     <div class="flex-container">
         <div class="box">
-            <h2> Your Book Details has been Uploaded Successfully  </h2><br>
+            <h2> Your Posts Details has been Uploaded Successfully  </h2><br>
             <a href="p5.php"><input type="button" value="BACK"></a>
         </div>
     </div>

@@ -137,7 +137,7 @@
             session_start();
             $uzer = $_SESSION["username"];
                 $conn = mysqli_connect("localhost","root","","laravel1");
-                $s = "select * from books where Username = '$uzer'";
+                $s = "select * from posts where Username = '$uzer'";
                 $request = mysqli_query($conn,$s);
                 //$n = mysqli_num_rows($request);       for counting rows
 
@@ -148,7 +148,7 @@
                 {
                     while($row = mysqli_fetch_assoc($request))
                     {
-                        $h1 = $row["Book_Name"];
+                        $h1 = $row["Post_Name"];
                         $h2 = $row["Publisher_Name"];
                         $h3 = $row["Year"];
                         $h4 = $row["Username"];
@@ -173,7 +173,7 @@
                             if($a=="Delete All")
                             {
                                 
-                                $nq = "delete from books where Book_Name = '$h1' and Username = '$h4'";
+                                $nq = "delete from posts where Post_Name = '$h1' and Username = '$h4'";
                                 $nresult = mysqli_query($conn,$nq);
                                 if($nresult)
                                 {
@@ -198,7 +198,7 @@
     </div>
 
     <div>
-        <h2 style="color:black; text-align:center"> Your uploaded Book Details 
+        <h2 style="color:black; text-align:center"> Your uploaded Post Details 
         <form method='post' action='<?php echo $path ?>'>
                            <br> <input  style="color:royalblue" type=submit value='Delete All' name='b2'>
                         </form></h2>
@@ -210,7 +210,7 @@
             
             $uzer = $_SESSION["username"];
                 $conn = mysqli_connect("localhost","root","","laravel1");
-                $s = "select * from books where Username = '$uzer'";
+                $s = "select * from posts where Username = '$uzer'";
                 $request = mysqli_query($conn,$s);
                 //$n = mysqli_num_rows($request);       for counting rows
 
@@ -221,7 +221,7 @@
                 {
                     while($row = mysqli_fetch_assoc($request))
                     {
-                        $h1 = $row["Book_Name"];
+                        $h1 = $row["Post_Name"];
                         $h2 = $row["Publisher_Name"];
                         $h3 = $row["Year"];
                         $h4 = $row["Username"];

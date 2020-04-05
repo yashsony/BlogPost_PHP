@@ -154,21 +154,21 @@
         <div class="box">
             <img src="sell.png" style="height:100px; width:100px">
             <h1> SELL </h1>
-            <p class="content"> Now you can Sell your books at your own rate. </p>
+            <p class="content"> Now you can Sell your posts at your own rate. </p>
             <input type="submit" value="SELL" name="b1" class="sellbuy">
         </div>
 
         <div class="box">
             <img src="buy.png" style="height:100px; width:100px">
             <h1> BUY </h1>
-            <p class="content"> Now you can Buy books at cheaper rates than market. </p>
+            <p class="content"> Now you can Buy posts  </p>
             <input type="submit" value="BUY" name="b1" class="sellbuy">
         </div>
 
         <div class="box">
             <img src="books2.png" style="height:100px; width:100px">
             <h1> RECORDS </h1>
-            <p class="content"> Check status of your Books that you have uploaded </p>
+            <p class="content"> Check status of your Posts that you have uploaded </p>
             <input type="submit" value="VIEW" name="b1" class="sellbuy">
         </div>
 

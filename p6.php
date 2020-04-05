@@ -128,7 +128,7 @@ $price = "";
         }
         else if(!preg_match("/^[A-Za-z0-9 .]{3}[A-Za-z0-9 .]+$/",$a))
         {
-            $x = "Invalid Book Name";
+            $x = "Invalid POST Name";
         }
         else
         {
@@ -178,7 +178,7 @@ $price = "";
         {
             $conn = mysqli_connect("localhost","root","","laravel1");
             $k = $_SESSION["username"];
-            $s = "insert into books VALUES('$k','$a','$b','$c','$d','')";
+            $s = "insert into Post VALUES('$k','$a','$b','$c','$d','')";
             $request = mysqli_query($conn,$s);
             if($request)
             {
@@ -194,7 +194,7 @@ $price = "";
 
     <div class="flex-container">
         <div class="box">
-            <h2 style="letter-spacing:3px"> BOOK DETAILS  </h2><br>
+            <h2 style="letter-spacing:3px"> POST DETAILS  </h2><br>
            
             <span style="transform:translate(0px,-5px)"><?php echo $x ?></span>
             <input type = "text" name = "n1" placeholder="Book Name" maxlength=20 value="<?php if(!empty($a)) echo $a ?>"><br>
